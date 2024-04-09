@@ -1,14 +1,9 @@
----
-title: "Evaluación: Construyendo una simple app con contenedor de
-  Docker"
----
+## "Evaluación: Construyendo una simple app con contenedor de
+##  Docker"
 
-> .
->
-> **Objetivos**
->
-> **Parte 1: Crear un script Bash simple Parte 2: Crear una aplicación
-> web simple**
+**Objetivos**
+**Parte 1: Crear un script Bash simple Parte 2: Crear una aplicación
+ web simple**
 >
 > **Parte 3: Configurar la aplicación web para utilizar archivos de
 > sitio web**
