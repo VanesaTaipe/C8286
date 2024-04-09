@@ -88,17 +88,19 @@ Modifique el modo de la secuencia de comandos a un ejecutable mediante el comand
 
 **Cambiar el nombre del archivo para eliminar la extensión .sh.**
 
-Puede cambiar el nombre del archivo para quitar la extensión de modo que los usuarios no tengan que agregar .sh al comando para ejecutar la secuencia de comandos.
+Puede cambiar el nombre del archivo para quitar la extensión de modo que los usuarios no tengan que agregar .sh al comando para ejecutar la secuencia de comandos.<BR>
 
-``` /home/alumno/app-web$ **mv user-input.sh user-input```
+``` /home/alumno/app-web$ **mv user-input.sh user-input ```
 
 **Ejecutar el script desde la línea de comandos.**
 
 Ahora el script se puede ejecutar desde la línea de comandos sin el comando **source** o una extensión. Para ejecutar un script bash sin el comando source, debe escribir "./" delante del nombre del script.
 
-/home/alumno/app-web$ **./user-input**
-```Introduzca su nombre: Vanesa
-Tu nombre es Vanesa.```
+/home/alumno/app-web$ **./user-input**<BR>
+```
+Introduzca su nombre: Vanesa
+Tu nombre es Vanesa.
+```
 
 **Investigar otros scripts bash.**
 
@@ -106,18 +108,16 @@ Si tienes poca o ninguna experiencia en la creación de scripts bash, tómate un
 
 Por ejemplo,
 <BR>
+
 ``` 
 #!/bin/bash
-
 if ! ps aux | grep -q "[n]ombre\_del\_proceso"; then
-
 echo "El proceso no está corriendo. Reiniciando..." comando\_para\_reiniciar\_el\_proceso
-
 fi 
 ```
 <BR>
 
-``` 
+```
 alumno@administrador-20VE:~/app-web$ bash user1-input.sh
 El proceso no está corriendo. Reiniciando...
 ```
