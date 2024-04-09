@@ -104,7 +104,8 @@ Tu nombre es Vanesa.```
 
 Si tienes poca o ninguna experiencia en la creación de scripts bash, tómate un tiempo para buscar tutoriales de bash, ejemplos de bash y juegos de bash en Internet.
 
-Por ejemplo,<BR>
+Por ejemplo,
+<BR>
 ``` 
 #!/bin/bash
 
@@ -113,7 +114,9 @@ if ! ps aux | grep -q "[n]ombre\_del\_proceso"; then
 echo "El proceso no está corriendo. Reiniciando..." comando\_para\_reiniciar\_el\_proceso
 
 fi 
-```<BR>
+```
+<BR>
+
 ``` 
 alumno@administrador-20VE:~/app-web$ bash user1-input.sh
 El proceso no está corriendo. Reiniciando...
