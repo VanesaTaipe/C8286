@@ -234,8 +234,7 @@ El proceso no está corriendo. Reiniciando...
 
 
 
-> ![](./image7.png){width="6.40660542432196in"
-> height="0.8194444444444444in"}
+> ![](./image7.png)
 
 ## Comprobar que el servidor se está ejecutando.
 
@@ -259,9 +258,7 @@ El proceso no está corriendo. Reiniciando...
 > /home/alumno/app-web\$
 
 
-![](./image5.png){width="6.40660542432196in"
-height="1.8611111111111112in"}
-
+![](./image5.png)
 ## Detener el servidor.
 
 > Volver a la ventana de terminal donde se está ejecutando el servidor y
@@ -418,8 +415,7 @@ height="1.8611111111111112in"}
 > \</html\>/home/alumno/app-web\$
 >
 
-> /home/alumno/app-web\$![](./image4.png){width="6.40660542432196in"
-> height="0.9583333333333334in"}
+> /home/alumno/app-web\$![](./image4.png)
 
 ## Detener el servidor.
 
@@ -746,8 +742,7 @@ height="1.8611111111111112in"}
 >
 > \</html\>/home/alumno/app-web\$
 >
-> /home/alumno/app-web\$![](./image3.png){width="6.40660542432196in"
-> height="0.7083333333333334in"}
+> /home/alumno/app-web\$![](./image3.png)
 
 (c) De forma predeterminada, Docker utiliza la subred IPv4 172.17.0.0/16
     > para redes de contenedores. (Esta dirección se puede cambiar si es
@@ -761,8 +756,7 @@ height="1.8611111111111112in"}
 >
 
 <BR>
-> ![](./image1.png){width="6.40660542432196in"
-> height="1.7638888888888888in"}
+> ![](./image1.png)
 >
 > 1: lo: \<LOOPBACK,UP,LOWER_UP\> mtu 65536 qdisc noqueue state UNKNOWN
 > group default qlen 1000
@@ -891,8 +885,6 @@ height="1.8611111111111112in"}
 > /home/alumno/app-web\$ **docker ps -a**
 >
 > CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
->
-> /home/alumno/app-web\$
 ![](./image10.png)
 
 > **Entregable:**
