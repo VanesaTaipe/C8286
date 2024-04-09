@@ -96,26 +96,26 @@ Puede cambiar el nombre del archivo para quitar la extensión de modo que los us
 
 Ahora el script se puede ejecutar desde la línea de comandos sin el comando **source** o una extensión. Para ejecutar un script bash sin el comando source, debe escribir "./" delante del nombre del script.
 
-/home/alumno/app-web$ **./user-input**
-```Introduzca su nombre: Vanesa
-Tu nombre es Vanesa.```
+``` /home/alumno/app-web$ **./user-input** ```
+
+```
+Introduzca su nombre: Vanesa
+Tu nombre es Vanesa.
+```
 
 **Investigar otros scripts bash.**
 
 Si tienes poca o ninguna experiencia en la creación de scripts bash, tómate un tiempo para buscar tutoriales de bash, ejemplos de bash y juegos de bash en Internet.
 
 Por ejemplo,
-<BR>
+
 ``` 
 #!/bin/bash
-
 if ! ps aux | grep -q "[n]ombre\_del\_proceso"; then
-
 echo "El proceso no está corriendo. Reiniciando..." comando\_para\_reiniciar\_el\_proceso
-
 fi 
 ```
-<BR>
+
 
 ``` 
 alumno@administrador-20VE:~/app-web$ bash user1-input.sh
