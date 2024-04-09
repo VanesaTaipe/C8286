@@ -893,8 +893,7 @@ height="1.8611111111111112in"}
 > CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
 >
 > /home/alumno/app-web\$
-![](./image10.png){width="6.40660542432196in"
-height="3.4027777777777777in"}
+![](./image10.png)
 
 > **Entregable:**
 >
