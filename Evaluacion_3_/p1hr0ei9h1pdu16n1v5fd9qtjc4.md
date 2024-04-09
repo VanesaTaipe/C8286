@@ -35,166 +35,89 @@
 > archivo de script. En esta parte, revisará brevemente cómo crear un
 > script bash. Más adelante, usará un script bash para automatizar la
 > creación de una aplicación web dentro de un contenedor Docker.
+**Crear un archivo Bash vacío**
 
-## Crear un archivo Bash vacío
+Cambie su directorio de trabajo a **~/home/alumno/app-web** y agregue un nuevo archivo llamado **user-input.sh**.
 
-> Cambie su directorio de trabajo a **\~/home/alumno/app-web** y agregue
-> un nuevo archivo llamado
+**Abrir el archivo en el editor de texto nano.**
 
-### user-input.sh.
+Utilice el comando **nano** para abrir el editor de texto nano. /home/alumno/app-web$ **nano user-input.sh**
 
-> \~\$ **cd /home/alumno/app-web**
->
-> \~/home/alumno/app-web \$ **touch user-input.sh**
+**Añada la 'she-bang' a la parte superior del script.**
 
-## Abrir el archivo en el editor de texto nano.
+Desde aquí puede ingresar comandos para su script bash. Utilice las teclas de flecha para navegar en **nano**. Observe los comandos en la parte inferior (no se muestran aquí) para administrar el archivo. El símbolo de quilate (^) indica que utiliza la tecla CTRL o Comando del teclado. Por ejemplo, para salir de **nano**, escriba CTRL+X.
 
-> Utilice el comando **nano** para abrir el editor de texto nano.
->
-> /home/alumno/app-web\$ **nano user-input.sh**
+Agregue el 'she-bang' que le dice al sistema que este archivo incluye comandos que deben ejecutarse en el shell bash.
 
-## Añada la \'she-bang\' a la parte superior del script.
+``` #!/bin/bash```
 
-> Desde aquí puede ingresar comandos para su script bash. Utilice las
-> teclas de flecha para navegar en **nano**. Observe los comandos en la
-> parte inferior (no se muestran aquí) para administrar el archivo. El
-> símbolo de quilate (\^) indica que utiliza la tecla CTRL o Comando del
-> teclado. Por ejemplo, para salir de **nano**, escriba CTRL+X.
->
-> Agregue el \'she-bang\' que le dice al sistema que este archivo
-> incluye comandos que deben ejecutarse en el shell bash.
->
-> #!/bin/bash
->
-> **Nota**: Puede usar un editor de texto gráfico o abrir el archivo con
-> VS Code. Sin embargo, debe estar familiarizado con los editores de
-> texto de línea de comandos como **nano** y **vim**. Busque tutoriales
-> en Internet para actualizar sus habilidades o aprender más sobre
-> ellos.
+**Nota**: Puede usar un editor de texto gráfico o abrir el archivo con VS Code. Sin embargo, debe estar familiarizado con los editores de texto de línea de comandos como **nano** y **vim**. Busque tutoriales en Internet para actualizar sus habilidades o aprender más sobre ellos.
 
-## Agregar comandos simples de bash al script.
+**Agregar comandos simples de bash al script.**
 
-> Introducir algunos comandos bash simples para su script. Los
-> siguientes comandos solicitarán al usuario un nombre, establecerán el
-> nombre en una variable llamada **username** y mostrarán una cadena de
-> texto con el nombre del usuario.
->
-> echo -n \"Introduzca su nombre: \" read userName
->
-> echo \"Tu nombre es \$userName.\"
+Introducir algunos comandos bash simples para su script. Los siguientes comandos solicitarán al usuario un nombre, establecerán el nombre en una variable llamada **username** y mostrarán una cadena de texto con el nombre del usuario.
 
-## Salga de nano y guarde su script.
+echo -n "Introduzca su nombre: " read userName
 
-> Presione **CTRL+X**, luego **Y**, luego **ENTRAR** para salir de
-> **nano** y guardar el script.
->
-> alumno@administrador-20VE:\~/app-web\$ ./user-input
->
-> Introduzca su nombre: Vanesa
->
-> Tu nombre es Vanesa.
+echo "Tu nombre es $userName."
 
-## Ejecutar el script desde la línea de comandos.
+**Salga de nano y guarde su script.**
 
-> Puede ejecutarlo directamente desde la línea de comandos usando el
-> siguiente comando.
->
-> /home/alumno/app-web\$ **bash user-input.sh**
->
-> Escribir su nombre: Kapumota Tu nombre es Bob.
->
-> /home/alumno/app-web\$
+Presione **CTRL+X**, luego **Y**, luego **ENTRAR** para salir de **nano** y guardar el script.
 
-## Cambiar el modo del script a un archivo ejecutable para todos los usuarios.
+**Ejecutar el script desde la línea de comandos.**
 
-> Modifique el modo de la secuencia de comandos a un ejecutable mediante
-> el comando **chmod**. Establezca las opciones en **a+x** para que el
-> script sea ejecutable (x) para todos los usuarios (a). Después de usar
-> **chmod**, se han modificado los permisos de aviso para usuarios,
-> grupos y otros para incluir la \"x\" (ejecutable).
->
-> /home/alumno/app-web\$ **ls -l user-input.sh**
->
-> -rw-rw-r\-- 1 alumno alumno 90 abr 8 11:49 user-input.sh
->
-> /home/alumno/app-web\$ **chmod a+x user-input.sh**
->
-> /home/alumno/app-web\$ **ls -l user-input.sh**
->
-> -rwxrwxr-x 1 alumno alumno 90 abr 8 11:49 user-input.sh
+Puede ejecutarlo directamente desde la línea de comandos usando el siguiente comando.
 
-## Cambiar el nombre del archivo para eliminar la extensión .sh.
+```
+alumno@administrador-20VE:~/app-web$ ./user-input
+Introduzca su nombre: Vanesa
+Tu nombre es Vanesa
+```
 
-> Puede cambiar el nombre del archivo para quitar la extensión de modo
-> que los usuarios no tengan que agregar .sh al comando para ejecutar la
-> secuencia de comandos.
->
-> /home/alumno/app-web\$ **mv user-input.sh user-input**
 
-## Ejecutar el script desde la línea de comandos.
+**Cambiar el modo del script a un archivo ejecutable para todos los usuarios.**
 
-> Ahora el script se puede ejecutar desde la línea de comandos sin el
-> comando **source** o una extensión. Para ejecutar un script bash sin
-> el comando source, debe escribir \"./\" delante del nombre del script.
->
-> /home/alumno/app-web\$ **./user-input**
->
-> Introduzca su nombre: Vanesa
->
-> Tu nombre es Vanesa.
+Modifique el modo de la secuencia de comandos a un ejecutable mediante el comando **chmod**. Establezca las opciones en **a+x** para que el script sea ejecutable (x) para todos los usuarios (a). Después de usar **chmod**, se han modificado los permisos de aviso para usuarios, grupos y otros para incluir la "x" (ejecutable).
 
-## Investigar otros scripts bash.
+```/home/alumno/app-web$ **ls -l user-input.sh** -rw-rw-r— 1 devasc devasc 84 Jun 7 16:43 user-input.sh ```
 
-> Si tienes poca o ninguna experiencia en la creación de scripts bash,
-> tómate un tiempo para buscar tutoriales de bash, ejemplos de bash y
-> juegos de bash en Internet.
->
-> Por ejemplo, #!/bin/bash
->
-> if ! ps aux \| grep -q \"\[n\]ombre_del_proceso\"; then echo \"El
-> proceso no está corriendo. Reiniciando\...\"
-> comando_para_reiniciar_el_proceso
->
-> fi O
->
-> #!/bin/bash
->
-> ps -eo stat,pid,cmd \| grep \"\^Z\" \| while read stat pid cmd; do
-> echo \"Proceso zombi detectado: PID=\$pid CMD=\$cmd\" done
->
-> O
->
-> #!/bin/bash while true; do
->
-> ps -eo %cpu,pid,cmd \--sort=-%cpu \| head -n 10 \| awk \'\$1 \> 80.0 {
-> printf(\"Alto uso de CPU (%s%%) por PID %s: %s\\n\", \$1, \$2, \$3);
->
-> }\' \| while read LINE; do
->
-> echo \"\$LINE\" \| mail -s \"Alerta de CPU\" <admin@domain.com> done
->
-> sleep 60 done
->
-> O
->
-> #!/bin/bash PROCESS_NAME=\"httpd\"
->
-> MAX_INSTANCES=10
->
-> count=\$(ps -C \$PROCESS_NAME \--no-headers \| wc -l) if \[ \$count
-> -gt \$MAX_INSTANCES \]; then
->
-> echo \"Número máximo de instancias (\$MAX_INSTANCES) superado para
-> \$PROCESS_NAME con
->
-> \$count instancias.\" Fi
->
-> bashuser1-input.s
+```/home/alumno/app-web$ **chmod a+x user-input.sh```
 
-alumno@administrador-20VE:\~/app-web\$ bash user1-input.sh
+```/home/alumno/app-web$ **ls -l user-input.sh** -rwxrwxr-x 1 devasc devasc 84 Jun 7 16:43 user-input.sh ```
 
-El proceso no está corriendo. Reiniciando\...
+**Cambiar el nombre del archivo para eliminar la extensión .sh.**
 
+Puede cambiar el nombre del archivo para quitar la extensión de modo que los usuarios no tengan que agregar .sh al comando para ejecutar la secuencia de comandos.
+
+``` /home/alumno/app-web$ **mv user-input.sh user-input```
+
+**Ejecutar el script desde la línea de comandos.**
+
+Ahora el script se puede ejecutar desde la línea de comandos sin el comando **source** o una extensión. Para ejecutar un script bash sin el comando source, debe escribir "./" delante del nombre del script.
+
+/home/alumno/app-web$ **./user-input**
+```Introduzca su nombre: Vanesa
+Tu nombre es Vanesa.```
+
+**Investigar otros scripts bash.**
+
+Si tienes poca o ninguna experiencia en la creación de scripts bash, tómate un tiempo para buscar tutoriales de bash, ejemplos de bash y juegos de bash en Internet.
+
+Por ejemplo,<BR>
+``` 
+#!/bin/bash
+
+if ! ps aux | grep -q "[n]ombre\_del\_proceso"; then
+
+echo "El proceso no está corriendo. Reiniciando..." comando\_para\_reiniciar\_el\_proceso
+
+fi 
+```<BR>
+``` 
+alumno@administrador-20VE:~/app-web$ bash user1-input.sh
+El proceso no está corriendo. Reiniciando...
+```
 # Crear una aplicación web simple
 
 > Antes de poder lanzar una aplicación en un contenedor Docker, primero
@@ -306,6 +229,8 @@ El proceso no está corriendo. Reiniciando\...
 -   Ejecutando en [http://0.0.0.0:8080/]{.underline} (Presione CTRL+C
     > para salir)
 
+
+
 > ![](./image7.png){width="6.40660542432196in"
 > height="0.8194444444444444in"}
 
@@ -316,7 +241,7 @@ El proceso no está corriendo. Reiniciando\...
 (1) Abra el navegador web Chromium e introduzca 0.0.0.0:8080 en el campo
     > URL. Debería obtener la siguiente salida:
 
-### Me estás llamando desde 127.0.0.1
+```  Me estás llamando desde 127.0.0.1 ```
 
 > Si recibe una respuesta de \"HTTP 400 Bad Request\", compruebe
 > cuidadosamente su script sample_app.py.
@@ -326,9 +251,10 @@ El proceso no está corriendo. Reiniciando\...
 
 > /home/alumno/app-web \$ **curl [http://0.0.0.0:8080]{.underline}**
 >
-> Me estás llamando desde 127.0.0.1
+``` Me estás llamando desde 127.0.0.1 ```
 >
 > /home/alumno/app-web\$
+
 
 ![](./image5.png){width="6.40660542432196in"
 height="1.8611111111111112in"}
@@ -434,6 +360,8 @@ height="1.8611111111111112in"}
 
 -   
 
+
+
 > **Nota**: Si obtuvo la salida de rastreo (Traceback)
 > y![](./image6.png){width="6.40660542432196in"
 > height="1.8194444444444444in"} un error con un mensaje similar a
@@ -453,7 +381,7 @@ height="1.8611111111111112in"}
     > campo URL. Debería obtener la misma salida que antes. Sin embargo,
     > su fondo será azul metálico claro y el texto tendrá el formato H1.
 
-### Me estás llamando desde 127.0.0.1
+``` ### Me estás llamando desde 127.0.0.1```
 
 (2) Abrir otra ventana de terminal y utilice el comando **curl** para
     > verificar la respuesta del servidor. Aquí es donde verá el
@@ -486,6 +414,7 @@ height="1.8611111111111112in"}
 >
 > \</html\>/home/alumno/app-web\$
 >
+
 > /home/alumno/app-web\$![](./image4.png){width="6.40660542432196in"
 > height="0.9583333333333334in"}
 
@@ -522,7 +451,7 @@ height="1.8611111111111112in"}
 > los comandos para crear una estructura de directorios con **tempdir**
 > como directorio principal.
 >
-> #!/bin/bash
+>```  #!/bin/bash ```
 >
 > mkdir tempdir
 >
@@ -825,8 +754,10 @@ height="1.8611111111111112in"}
     > anteriormente en la evaluación y la nueva interfaz Docker con la
     > dirección IP 172.17.0.1.
 
-> /home/alumno/app-web\$ **ip address**
+> ```  /home/alumno/app-web\$ **ip address** ``` 
 >
+
+<BR>
 > ![](./image1.png){width="6.40660542432196in"
 > height="1.7638888888888888in"}
 >
@@ -959,7 +890,7 @@ height="1.8611111111111112in"}
 > CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
 >
 > /home/alumno/app-web\$
-
+<BR>
 ![](./image10.png){width="6.40660542432196in"
 height="3.4027777777777777in"}
 
