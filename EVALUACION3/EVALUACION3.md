@@ -1,40 +1,39 @@
 ﻿` `![](Aspose.Words.a65cfa57-2039-4914-b96f-008138c101ce.001.png)![](Aspose.Words.a65cfa57-2039-4914-b96f-008138c101ce.002.png)
 
-**Evaluación: Construyendo una simple app con contenedor de Docker**
+#**Evaluación: Construyendo una simple app con contenedor de Docker**
 
-**1**⃣**Crear un Bash Script simple:**
+##**Crear un Bash Script simple:**
 
 ● Crear el archivo user-input.sh en el archivo app-web.
 
-**Ejecutar el script desde la línea de comandos.** ```alumno@administrador-20VE:~/app-web$ ./user-input```
+**Ejecutar el script desde la línea de comandos.** 
+```alumno@administrador-20VE:~/app-web$ ./user-input```
 
-\```
-
+```
 Introduzca su nombre: Vanesa Tu nombre es Vanesa.
+```
 
-\```
-
-**Cambiar el modo del script a un archivo ejecutable para todos los usuarios.** ```
-
+**Cambiar el modo del script a un archivo ejecutable para todos los usuarios.**<BR>
+```
 alumno@administrador-20VE:~/app-web$ **ls -l user-input.sh** -rw-rw-r-- 1 alumno alumno 90 abr 8 11:49 user-input.sh
 
 alumno@administrador-20VE:~/app-web$ **chmod a+x user-input.sh**
 
 alumno@administrador-20VE:~/app-web$ **ls -l user-input.sh** -rwxrwxr-x 1 alumno alumno 90 abr 8 11:49 user-input.sh
-
-\```
+```
 
 **Cambiar el nombre del archivo para eliminar la extensión .sh.**
 
-```alumno@administrador-20VE:~/app-web$ **mv user-input.sh user-input**``` ```
+```
+alumno@administrador-20VE:~/app-web$ **mv user-input.sh user-input**``` ```
 
 alumno@administrador-20VE:~/app-web$ **./user-input** Introduzca su nombre: Vanesa
 
 Tu nombre es Vanesa.
 
-\```
+```
 
-**2**⃣**Crear una aplicación web simple**
+##**Crear una aplicación web simple**
 
 Una vez que ya hayamos instalado Flask en el sistema y creado el archivo 'sample\_app.py', ejecutamos la aplicación:
 
@@ -44,21 +43,22 @@ Si bien hay dos maneras de comprobar si la aplicación web se está ejecutando c
 
 ![](Aspose.Words.a65cfa57-2039-4914-b96f-008138c101ce.004.png)
 
-**3**⃣**Configurar la aplicación web para utilizar archivos de sitio web**
+
+##**Configurar la aplicación web para utilizar archivos de sitio web**
 
 En esta parte, construya la aplicación web de ejemplo para incluir una página **index.html** y una especificación **style.css**. El **index.html** es normalmente la primera página cargada en el navegador web de un cliente al visitar su sitio web. El **style.css** es una hoja de estilo utilizada para personalizar el aspecto de la página web.
 
 **Explorar los directorios que utilizará la aplicación web**
 
-Primero, debemos crear el directorio 'templates' y, en ese directorio, crear el archivo 'index.html':
+Primero, debemos crear el directorio 'templates' y, en ese directorio, crear el archivo 'index.html':<BR>
 
-Como ya hemos creado el directorio 'templates' con 'mkdir templates', creamos el archivo 'index.html':
+Como ya hemos creado el directorio 'templates' con 'mkdir templates', creamos el archivo 'index.html':<BR>
 
 ``` alumno@administrador-20VE:~/app-web$ **templates/index.html** ```
 
 ![](Aspose.Words.a65cfa57-2039-4914-b96f-008138c101ce.005.png)
 
-Ahora creamos el directorio \*\*static\*\* en lo creamos el archivo \*\*style.css\*\*. ``` alumno@administrador-20VE:~/app-web$ **cat static/style.css** ```
+Ahora creamos el directorio \*\*static\*\* en lo creamos el archivo \*\*style.css\*\*. ``` alumno@administrador-20VE:~/app-web$ **cat static/style.css**```
 
 ![](Aspose.Words.a65cfa57-2039-4914-b96f-008138c101ce.006.png)
 
@@ -74,7 +74,8 @@ También existe otra y es utilizar el \*\*curl\*\*.
 
 ![](Aspose.Words.a65cfa57-2039-4914-b96f-008138c101ce.009.png)
 
-**4**⃣**Crear un script de Bash para compilar y ejecutar un contenedor Docker**
+
+##**Crear un script de Bash para compilar y ejecutar un contenedor Docker**
 
 Ahora tenemos que crear un archivo \*\*sample\_app.sh\*\*.
 
@@ -96,8 +97,8 @@ Ahora necesitamos conocer la dirección \*\*ip address\*.
 
 Para acceder al contenedor, colocamos el comando \*\*docker exec -it\*\* para entrar en modo \*\*/bin/bash\*\* (por línea de comandos) al contenedor, y para ver qué archivos contiene, usaremos el comando \*\*ls\*\*.
 
-\```![](Aspose.Words.a65cfa57-2039-4914-b96f-008138c101ce.013.png)
-
+![](Aspose.Words.a65cfa57-2039-4914-b96f-008138c101ce.013.png)
+```
 alumno@administrador-20VE:~/app-web$ docker exec -it samplerunning /bin/bash root@f498e5499151:/# ls
 
 bin dev home lib64 mnt proc run srv tmp var
@@ -108,20 +109,17 @@ root@f498e5499151:/# ls home/myapp/
 
 sample\_app.py static templates
 
-\```
+```
 
 **Detener y retirar el contenedor Docker.**
 
 a)Puede detener el contenedor Docker con el comando d**ocker stop** especificando el nombre del contenedor en ejecución. Tomará unos segundos limpiar y almacenar en caché el contenedor. Puede ver que aún existe ingresando el comando **docker ps -a**. Sin embargo, si actualiza la página web para **http://localhost:8080**, verá que la aplicación web ya no se está ejecutando.
 
-\```
-
+```
 docker stop samplerunning samplerunning
+```
 
-\```
-
-\```
-
+```
 alumno@administrador-20VE:~/app-web$ docker ps -a
 
 CONTAINER ID IMAGE COMMAND CREATED STATUS
@@ -142,20 +140,18 @@ practical\_hermann
 
 b065c2401a7a 396d02079e43 "python hola.py" 6 days ago Exited (1) 6 days ago
 
-\```
+```
 
 Para eliminar permanentemente el contenedor, primero se debe detener y luego remover con el comando **docker rm**. Siempre se puede reconstruir de nuevo ejecutando el programa **sample-app**. Utiliza el comando **docker ps -a** para verificar que se ha eliminado el contenedor
 
-\```
-
+```
 alumno@administrador-20VE:~/app-web$ docker rm samplerunning samplerunning
+```
 
-\```
-
-\```
-
+```
 alumno@administrador-20VE:~/app-web$ docker ps -a
 
-CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES ```
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+ ```
 
 ![](Aspose.Words.a65cfa57-2039-4914-b96f-008138c101ce.014.jpeg)
