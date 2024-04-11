@@ -1,4 +1,0 @@
-#!/bin/bash
-if ! ps aux | grep -q "[n]ombre_del_proceso"; then
-echo "El proceso no está corriendo. Reiniciando..."
-fi
