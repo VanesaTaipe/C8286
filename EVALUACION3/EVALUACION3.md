@@ -1,6 +1,6 @@
 ﻿` `![](Aspose.Words.a65cfa57-2039-4914-b96f-008138c101ce.001.png)![](Aspose.Words.a65cfa57-2039-4914-b96f-008138c101ce.002.png)
 
-#**Evaluación: Construyendo una simple app con contenedor de Docker**
+#Evaluación: Construyendo una simple app con contenedor de Docker
 
 ##**Crear un Bash Script simple:**
 
