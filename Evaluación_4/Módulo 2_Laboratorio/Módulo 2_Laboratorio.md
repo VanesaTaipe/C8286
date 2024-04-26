@@ -52,17 +52,14 @@ Examine los datos en el grupo de conjuntos de datos, que se ha proporcionado en 
 
 - Descargue el archivo ejecutando el siguiente comando:
 
-\```wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-200-ACDSCI-1-DEV/lab-01-s3/c ode.zip -P /home/ec2-user/environment
-
-\```
+```wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-200-ACDSCI-1-DEV/lab-01-s3/c ode.zip -P /home/ec2-user/environment```
 
 ![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.007.png)
 
 - Para extraer los archivos, ejecute el siguiente comando:![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.008.png)
 
-|```|unzip code.zi|p` ``|
-| - | - | - |
-||||
+```unzip code.zi|p` ``
+
 - Para ver el contenido de lab1.csv:
 
 ```cat lab1.csv```
@@ -80,10 +77,8 @@ Copie datos en el depósito S3
 - Para copiar el conjunto de datos a S3 bukcet, ejecute el siguiente comando.![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.011.png)![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.012.jpeg)
 - Nota: <ade-s3lab-bucket--a5b63450> es el nombre: ade-s3lab-bucket--a5b63450```
 
-|```|aws s3 cp lab1.csv s3://|
-| - | - |
-|||
-|||
+```aws s3 cp lab1.csv s3://ade-s3lab-bucket--a5b63450```
+
 - Para confirmar que el archivo se ha agregado al depósito, ejecute el siguiente comando:
 
 ```aws s3 ls s3://ade-s3lab-bucket--a5b63450```
@@ -99,10 +94,9 @@ Utilice S3 Select para ejecutar consultas SQL en los datos cargados.
 - Consola de administración de Buka AWS — servicios — S3
 - Pilih lab1.csv — Acciones de objetos — consulta con selección de S3.
 
-|SELECT \* FROM s3object s LIMIT 5|```|
-| - | - |
-|||
-Utilizamos ```![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.014.jpeg)![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.015.jpeg)
+Utilizamos ```SELECT * FROM s3object s LIMIT 5```
+
+![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.014.jpeg)![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.015.jpeg)
 
 A continuación, haga coincidir la consulta para ver solo el nombre de las tres primeras filas.
 
@@ -144,14 +138,9 @@ Compresión de archivo
 
 - Cargando la versión GZIP a un depósito S3
 
-  |```|aws s3 cp lab1.csv.gz s3:/|
-  | - | - |
-  |||
-/ade-s3lab-bucket--a5b63450![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.022.png)
+  ```aws s3 cp lab1.csv.gz s3://ade-s3lab-bucket--a5b63450 --cache-control max-age=6|0```
+  ![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.022.png)
 
-|--cache-control max-age=6|0` ``|
-| - | - |
-|||
 Utilice S3 select para confirmar archivos comprimidos
 
 - Regresar a la consola de Amazon S3
@@ -162,7 +151,7 @@ Utilice S3 select para confirmar archivos comprimidos
 - En la configuración de entrada, deje la configuración predeterminada, para Compresión seleccione GZIP
 - En la consulta SQL, ejecute el siguiente comando:
 
-```SELECT \* FROM s3object s LIMIT 3```
+```SELECT * FROM s3object s LIMIT 3```
 
 ![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.024.jpeg)
 
@@ -200,15 +189,11 @@ Se mostrará un mensaje de error. Tenga en cuenta que la política de IAM adjunt
 
 - Pruebe si el usuario Paulo puede ejecutar comandos de AWS CLI en objetos de S3.
 
-\```AWS\_ACCESS\_KEY\_ID=$AK AWS\_SECRET\_ACCESS\_KEY=$SAK aws s3api get-object
+```AWS\_ACCESS\_KEY\_ID=$AK AWS\_SECRET\_ACCESS\_KEY=$SAK aws s3api get-object --bucket ade-s3lab-bucket--a5b6345 |0--key lab1.csv --region us-east-1 pulled\_lab.cs```
+![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.031.jpeg)
 
---bucket ade-s3lab-bucket--a5b6345![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.031.jpeg)
 
-|0--key lab1.csv --region us-east-1 pulled\_lab.cs|v` ``|
-| - | - |
-|||
-|||
-|||
+
 - Ver el contenido del objeto S3![](Aspose.Words.f36363a1-969b-45cb-9c71-aa50362e1d98.032.png)
 
 ```cat pulled\_lab.csv```
