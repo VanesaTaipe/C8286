@@ -1,0 +1,6 @@
+[
+    {"id": "sample1", "variants": [{"depth": 15, "quality": 30, "alleles": ["A", "T"]}, {"depth": 20, "quality": 25, "alleles": ["G", "C"]}]},
+    {"id": "sample2", "variants": [{"depth": 12, "quality": 22, "alleles": ["T", "T"]}, {"depth": 18, "quality": 28, "alleles": ["A", "C"]}]},
+    {"id": "sample3", "variants": [{"depth": 10, "quality": 20, "alleles": ["G", "G"]}, {"depth": 15, "quality": 25, "alleles": ["T", "A"]}]},
+    {"id": "sample4", "variants": [{"depth": 14, "quality": 24, "alleles": ["C", "C"]}, {"depth": 16, "quality": 26, "alleles": ["A", "G"]}]}
+]
