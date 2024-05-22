@@ -1,0 +1,41 @@
+#PARTE1#
+#EJERCICIO1
+# Cliente
+def sum_numbers(numbers):
+    conn = socket.create_connection(('127.0.0.1', 1936))
+    conn.send(b'\x02')
+    my_data = pickle.dumps(numbers)
+    conn.send(len(my_data).to_bytes(4, 'little'))
+    conn.send(my_data)
+    # ... resto del código para recibir el resultado
+
+# Servidor
+async def process_sum(reader, writer):
+    data_size = int.from_bytes(await reader.read(4), 'little')
+    numbers = pickle.loads(await reader.read(data_size))
+    result = sum(numbers)
+    writer.write(pickle.dumps(result))
+    await writer.drain()
+    writer.close()
+
+async def accept_requests(reader, writer):
+    op = await reader.read(1)
+    if op[0] == 0:
+        await submit_job(reader, writer)
+    elif op[0] == 1:
+        await get_results(reader, writer)
+    elif op[0] == 2:
+        await process_sum(reader, writer)
+ejercicio2
+# Servidor
+client_states = {}
+
+async def handle_client(reader, writer):
+    client_id = # genera un ID único para el cliente
+    client_states[client_id] = # inicializa el estado para este cliente
+    while True:
+        # maneja solicitudes del cliente
+        # actualiza client_states[client_id] según sea necesario
+
+async def accept_requests(reader, writer):
+    # despacha solicitudes a handle_client
