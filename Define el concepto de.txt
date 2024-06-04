@@ -1,0 +1,14 @@
+* Define el concepto de escalabilidad en el contexto de multicomputadores y discute los factores que afectan la escalabilidad, como la latencia de comunicación, el ancho de banda y el balance de carga. Proporciona ejemplos de cómo diseñar un sistema multicomputador escalable.
+Multicomputadoras: Sistemas compuestos por varios nodos de computación, cada uno con su propia CPU y memoria. Los nodos están interconectados mediante una red de alta velocidad.
+Escalabilidad: La capacidad de un sistema para adaptarse y manejar un aumento en la demanda sin perder rendimiento o funcionalidad.
+- Alta escalabilidad debido a la naturaleza independiente de los nodos.
+Escalabilidad: Permite construir sistemas con un gran número de nodos sin problemas significativos de contención.
+
+* Explica los desafíos de la sincronización en sistemas distribuidos y describe al menos dos algoritmos de sincronización (como el algoritmo de Lamport y el algoritmo de Ricart-Agrawala). Discute cómo estos algoritmos aseguran la exclusión mutua y las posibles desventajas.
+ SE basa en la cordinacion entre n procesos para conceder la entrada a una determina region. La idea basica es que los procesos que deseen entrar en sencion deben tenr la probacionn de todos lps demas nodos involucrados.- 
+
+
+
+* Describe los componentes clave en el diseño de un clúster de alto rendimiento, incluyendo nodos de computación, redes de interconexión, almacenamiento y software de gestión. Discute las decisiones de diseño que afectan el rendimiento y la escalabilidad del clúster. Modelos de Programación para Clústeres.
+Los clústeres son un tipo de arquitectura de multicomputador donde varios sistemas completos (nodos) están conectados a través de una red para trabajar juntos como un solo sistema. Los clústeres pueden ser homogéneos (todos los nodos son iguales) o heterogéneos (nodos con diferentes capacidades
+Clústeres de alto rendimiento (HPC): Diseñados para maximizar el rendimiento y son utilizados en simulaciones científicas, análisis de datos, y otras aplicaciones que requieren gran poder de cómputo.
