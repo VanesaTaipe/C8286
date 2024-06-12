@@ -19,7 +19,7 @@ negative_query = " OR ".join(negative_keywords)
 neutral_query = " OR ".join(neutral_keywords)
 
 # Número total de tweets a extraer por categoría
-total_tweets_per_category =1500
+total_tweets_per_category =3009
 
 # Lista para almacenar los tweets extraídos
 tweets_data = []
