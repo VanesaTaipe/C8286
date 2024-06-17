@@ -45,8 +45,8 @@ try:
                     "created_at": tweet.created_at,
                     "likes": tweet.public_metrics["like_count"],
                     "source": tweet.source,
-                    "tweet": tweet.text,
-                    "sentiment": sentiment
+                    "tweet": tweet.text
+                    #"sentiment": sentiment----
                 }
                 tweets_data.append(tweet_data)
     
