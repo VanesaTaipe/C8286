@@ -41,7 +41,9 @@ Fine-tuning: Asegúrate de ajustar adecuadamente los hiperparámetros durante el
 
 3. Resultados
 imagen
+
 3.1 Comparación de Rendimiento:
+
 Precisión: Mide la proporción de predicciones positivas correctas sobre el total de predicciones positivas hechas por el modelo.
 
 Recall: Indica la proporción de verdaderos positivos identificados correctamente respecto al total de casos positivos en los datos reales.
@@ -51,12 +53,14 @@ F1-score: Es una medida que combina precisión y recall en un solo número, úti
 Accuracy: Proporciona la proporción de predicciones correctas sobre el total de predicciones realizadas por el modelo.
 
 BERT (XLM-RoBERTa):
+
 - Precisión: 0.88 significa que el 88% de las predicciones positivas hechas por BERT fueron correctas.
 - Recall: 0.88 indica que el 88% de los verdaderos positivos en los datos reales fueron identificados por BERT.
 - F1-score: 0.88 es un promedio ponderado de precisión y recall, proporcionando una medida única del rendimiento del modelo.
 - Accuracy: 0.88 significa que el 88% de todas las predicciones hechas por BERT fueron correctas en general.
 
 Naive Bayes:
+
 - Precisión: 0.86 indica que el 86% de las predicciones positivas hechas por Naive Bayes fueron correctas.
 - Recall: 0.85 significa que el 85% de los verdaderos positivos en los datos reales fueron identificados por Naive Bayes.
 - F1-score: 0.85 es un promedio ponderado de precisión y recall para Naive Bayes.
@@ -80,12 +84,14 @@ Ambos modelos demostraron capacidad para manejar textos en los tres idiomas obje
 4. Discusión
 
 4.1 Fortalezas del Sistema
+
 - Capacidad multilingüe efectiva, manejando inglés, español y portugués.
 - Alto rendimiento general en la clasificación de sentimientos.
 - BERT muestra un rendimiento más equilibrado entre clases.
 - Naive Bayes ofrece una alternativa eficiente en términos de recursos computacionales.
 
 4.2 Limitaciones y Áreas de Mejora
+
 - El dataset utilizado puede tener limitaciones en términos de diversidad y balance de clases.
 - El tiempo de entrenamiento y recursos computacionales requeridos por BERT son significativos.
 - La precisión en la detección de sentimientos neutros es ligeramente inferior a las otras categorías.
@@ -99,6 +105,7 @@ Naive Bayes, aunque tiene ciertas fortalezas como una alta precisión en algunas
 Las matrices de confusión proporcionan una perspectiva detallada sobre dónde cada modelo tiene dificultades y aciertos en la clasificación de sentimientos.
 
 6. Futuras implimitaciones
+   
 Identificar los cuellos de botella en el rendimiento del sistema de análisis de sentimientos:
 
 Por qué es importante:
