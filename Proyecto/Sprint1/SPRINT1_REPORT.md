@@ -1,7 +1,8 @@
 # **Informe del Sprint 1**
 
+El proyecto "Análisis de sentimientos en redes sociales" tiene como objetivo desarrollar un sistema capaz de extraer y analizar los sentimientos expresados en Twitter utilizando técnicas de procesamiento del lenguaje natural (NLP). El sistema está optimizado para el procesamiento paralelo y en tiempo real, lo que permite obtener información valiosa y actualizada sobre las opiniones y emociones de los usuarios en la plataforma.
 1. Extracción de Datos de Twitter
-
+En este documento, se describen los detalles técnicos y los procedimientos llevados a cabo durante el Sprint 1 del proyecto, que se enfoca en la extracción y el preprocesamiento de datos de Twitter utilizando su API. Configuración de la API de Twitter API utilizada Se utilizará la API de Twitter v2 para extraer tweets en tiempo real. Obtención de credenciales y configuración de autenticación Para acceder a la API de Twitter, se requieren las siguientes credenciales:
 1.1. Configuración de la API y Autenticación
 Concepto: API v2 de Twitter y Bearer Token
 - Se utilizó la API v2 de Twitter, que requiere un Bearer Token para la autenticación.
