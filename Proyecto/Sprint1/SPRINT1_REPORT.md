@@ -1,4 +1,4 @@
-#**Informe del Sprint 1**
+# **Informe del Sprint 1**
 
 1. Extracción de Datos de Twitter
 
