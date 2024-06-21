@@ -44,7 +44,8 @@ Fine-tuning: Asegúrate de ajustar adecuadamente los hiperparámetros durante el
 - Se evaluaron utilizando métricas estándar: precisión, recall, F1-score y matrices de confusión.
 
 3. Resultados
-   
+
+ ![Texto alternativo](https://github.com/VanesaTaipe/C8286/blob/7075caba3ac54ea44e2981bfc1a6409fd110348f/Proyecto/Sprint2/imagenes/evaluacion.png)
 ![https://github.com/VanesaTaipe/C8286/blob/7075caba3ac54ea44e2981bfc1a6409fd110348f/Proyecto/Sprint2/imagenes/evaluacion.png]
 
 3.1 Comparación de Rendimiento:
