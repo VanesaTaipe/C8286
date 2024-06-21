@@ -46,7 +46,7 @@ Fine-tuning: Asegúrate de ajustar adecuadamente los hiperparámetros durante el
 3. Resultados
 
  ![Texto alternativo](https://github.com/VanesaTaipe/C8286/blob/7075caba3ac54ea44e2981bfc1a6409fd110348f/Proyecto/Sprint2/imagenes/evaluacion.png)
-![https://github.com/VanesaTaipe/C8286/blob/7075caba3ac54ea44e2981bfc1a6409fd110348f/Proyecto/Sprint2/imagenes/evaluacion.png]
+
 
 3.1 Comparación de Rendimiento:
 
@@ -73,7 +73,9 @@ Naive Bayes:
   Accuracy: 0.85 significa que el 85% de todas las predicciones hechas por Naive Bayes fueron correctas en general.
 
 3.2 Análisis por Clase
-imagen
+
+ ![Texto alternativo](https://github.com/VanesaTaipe/C8286/blob/7075caba3ac54ea44e2981bfc1a6409fd110348f/Proyecto/Sprint2/imagenes/matriz.png)
+
   
 BERT: Muestra una distribución equilibrada de verdaderos positivos (TP) y falsos negativos (FN) en todas las clases, indicando una capacidad sólida para clasificar correctamente los sentimientos.
 
