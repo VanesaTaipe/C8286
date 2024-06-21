@@ -1,3 +1,5 @@
+```
+
 [Twitter API] --> [Servicio de Extracción en Tiempo Real]
                                 |
                                 v
@@ -44,3 +46,5 @@
 - Profiling (cProfile)
 - Monitoreo de recursos
 ---> Retroalimentación a todos los componentes
+  
+```
