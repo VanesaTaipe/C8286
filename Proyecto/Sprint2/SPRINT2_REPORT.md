@@ -17,14 +17,18 @@ c. Eliminación de stopwords adaptada: Es crucial adaptar la lista de stopwords 
 d. Generación de bi-gramas: Es una buena práctica para capturar frases significativas y expresiones coloquiales que pueden afectar el sentimiento general del texto.
 
 2.2 Modelos Implementados
+
 a) BERT (Bidirectional Encoder Representations from Transformers)
+
 Utilizar una variante multilingüe como XLM-RoBERTa es apropiado para manejar textos en diferentes idiomas. El fine-tuning específico para análisis de sentimientos con una configuración de 3 épocas y tamaño de batch de 8 es razonable. Asegúrate de monitorear el rendimiento del modelo durante el entrenamiento para ajustar estos hiperparámetros si es necesario.
    - Se utilizó XLM-RoBERTa, una variante multilingüe de BERT.
    - Se realizó fine-tuning para la tarea específica de análisis de sentimientos.
    - Configuración: 3 épocas, tamaño de batch de 8, warmup steps de 500.
 
 b) Naive Bayes
+
 Este es un buen modelo baseline para comparar con BERT. El uso de CountVectorizer con bi-gramas es adecuado para capturar características importantes del texto. Considera también evaluar otros clasificadores basados en árboles como RandomForest o SVM lineales, ya que a veces pueden superar a Naive Bayes dependiendo de la naturaleza de los datos.
+
    - Se implementó MultinomialNB como baseline y modelo complementario.
    - Se utilizó CountVectorizer con bi-gramas para la vectorización del texto.
 
