@@ -79,7 +79,7 @@ Solución: Implementación de funciones de perfilado para analizar el rendimient
   - 85% consideró que los resultados del análisis de sentimientos eran precisos.
 
 5. Conclusiones y Recomendaciones
-
+modificar
 5.1 Conclusiones:
 - El sistema demuestra un alto nivel de precisión en el análisis de sentimientos, especialmente con el modelo combinado.
 - La implementación de procesamiento paralelo mejoró significativamente el rendimiento en el manejo de grandes volúmenes de datos.
@@ -90,4 +90,3 @@ Solución: Implementación de funciones de perfilado para analizar el rendimient
 - Explorar técnicas de optimización adicionales para reducir el uso de memoria de los modelos BERT.
 - Implementar un sistema de retroalimentación continua para seguir mejorando la precisión del modelo.
 - Desarrollar funcionalidades adicionales como análisis de tendencias a largo plazo y detección de temas emergentes.
-
