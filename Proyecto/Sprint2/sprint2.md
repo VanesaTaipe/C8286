@@ -47,6 +47,7 @@ b) Naive Bayes
 3. Resultados
 
 3.1 Comparación de Rendimiento:
+```
 
 Reporte de clasificación BERT:
               precision    recall  f1-score   support
@@ -59,7 +60,9 @@ Reporte de clasificación BERT:
    macro avg       0.89      0.88      0.89       241
 weighted avg       0.89      0.89      0.89       241
 
+```
 
+```
 Reporte de clasificación Naive Bayes:
               precision    recall  f1-score   support
 
@@ -70,6 +73,8 @@ Reporte de clasificación Naive Bayes:
     accuracy                           0.82       241
    macro avg       0.82      0.81      0.81       241
 weighted avg       0.82      0.82      0.82       241
+
+```
 
 Modelo BERT:
 
