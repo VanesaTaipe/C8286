@@ -45,6 +45,8 @@ b) Naive Bayes
 - Se evaluaron los modelos utilizando métricas estándar de clasificación: precisión, recall, F1-score y matrices de confusión. Estas métricas permiten analizar el rendimiento de los modelos en diferentes aspectos.
 
 3. Resultados
+   
+ ![Texto alternativo](https://github.com/VanesaTaipe/C8286/blob/00665968e32ddff4282dffc6d15a63367e410ea3/Proyecto/Sprint2/imagenes/imagen.png)
 
 3.1 Comparación de Rendimiento:
 ```
@@ -93,6 +95,8 @@ Precisión de 0.87: Significa que el 87% de las muestras que el modelo BERT clas
 Exactitud general (Accuracy): 0.89, lo que significa que el modelo BERT clasificó correctamente el 89% de todas las muestras. Promedios Macro y Ponderado: Reflejan el rendimiento promedio del modelo en todas las clases.
 
 3.2 Análisis por Clase(Matriz de confusion)
+
+ ![Texto alternativo](https://github.com/VanesaTaipe/C8286/blob/00665968e32ddff4282dffc6d15a63367e410ea3/Proyecto/Sprint2/imagenes/matri.png)
 
 El análisis de las matrices de confusión permite visualizar cómo se comportan los modelos en la clasificación de cada clase (positivo, negativo y neutro). 
 
