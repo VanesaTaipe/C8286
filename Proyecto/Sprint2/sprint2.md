@@ -48,21 +48,46 @@ b) Naive Bayes
 
 3.1 Comparación de Rendimiento:
 
-**BERT (XLM-RoBERTa):**
-- Precisión: 0.89
-- Recall: 0.90
-- F1-score: 0.90
-- Accuracy: 0.89
+Reporte de clasificación BERT:
+              precision    recall  f1-score   support
 
-**Naive Bayes:**
-- Precisión: 0.82
-- Recall: 0.81
-- F1-score: 0.81
-- Accuracy: 0.82
+           0       0.89      0.88      0.88        82
+           1       0.92      0.83      0.88        59
+           2       0.87      0.93      0.90       100
 
-Estos resultados indican que el modelo BERT tiene un mejor rendimiento general en comparación con el modelo Naive Bayes. La precisión, recall y F1-score más altos de BERT demuestran que es más efectivo en la clasificación correcta de los sentimientos.
+    accuracy                           0.89       241
+   macro avg       0.89      0.88      0.89       241
+weighted avg       0.89      0.89      0.89       241
 
-3.2 Análisis por Clase
+
+Reporte de clasificación Naive Bayes:
+              precision    recall  f1-score   support
+
+           0       0.90      0.73      0.81        82
+           1       0.78      0.78      0.78        59
+           2       0.79      0.91      0.85       100
+
+    accuracy                           0.82       241
+   macro avg       0.82      0.81      0.81       241
+weighted avg       0.82      0.82      0.82       241
+
+Modelo BERT:
+
+Clase 0:
+
+Precisión de 0.89: Significa que el 89% de las muestras que el modelo BERT clasificó como clase 0 realmente pertenecen a la clase 0. Recuerdo de 0.88: Significa que el modelo BERT logró identificar correctamente el 88% de todas las muestras que realmente pertenecen a la clase 0. Puntuación F1 de 0.88: Es una métrica equilibrada entre precisión y recuerdo, lo que indica un buen rendimiento general para esta clase.
+
+Clase 1:
+
+Precisión de 0.92: Significa que el 92% de las muestras que el modelo BERT clasificó como clase 1 realmente pertenecen a la clase 1. Recuerdo de 0.83: Significa que el modelo BERT logró identificar correctamente el 83% de todas las muestras que realmente pertenecen a la clase 1. Puntuación F1 de 0.88: Nuevamente, un buen rendimiento general para esta clase.
+
+Clase 2:
+
+Precisión de 0.87: Significa que el 87% de las muestras que el modelo BERT clasificó como clase 2 realmente pertenecen a la clase 2. Recuerdo de 0.93: Significa que el modelo BERT logró identificar correctamente el 93% de todas las muestras que realmente pertenecen a la clase 2. Puntuación F1 de 0.90: Excelente rendimiento general para esta clase.
+
+Exactitud general (Accuracy): 0.89, lo que significa que el modelo BERT clasificó correctamente el 89% de todas las muestras. Promedios Macro y Ponderado: Reflejan el rendimiento promedio del modelo en todas las clases.
+
+3.2 Análisis por Clase(Matriz de confusion)
 
 El análisis de las matrices de confusión permite visualizar cómo se comportan los modelos en la clasificación de cada clase (positivo, negativo y neutro). 
 
