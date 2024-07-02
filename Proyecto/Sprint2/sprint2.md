@@ -113,13 +113,6 @@ Se realizaron pruebas con textos de ejemplo en los tres idiomas (inglés, españ
 - Las matrices de confusión proporcionan una perspectiva detallada sobre dónde cada modelo tiene dificultades y aciertos en la clasificación de sentimientos.
 
 6. Futuras Implementaciones
-   - Identificar los cuellos de botella en el rendimiento del sistema de análisis de sentimientos:
-     - Utilizar herramientas de profiling como `cProfile` en Python para medir el tiempo de ejecución de diferentes partes del código.
-     - Monitorear el uso de recursos (CPU, memoria, I/O) durante la ejecución del sistema.
-     - Analizar los tiempos de respuesta en diferentes etapas del procesamiento (preprocesamiento, inferencia del modelo, post-procesamiento).
-   - Implementar técnicas de paralelismo utilizando `multiprocessing` y `threading`:
-     - Usar `multiprocessing` para tareas intensivas en CPU como el preprocesamiento de texto o la inferencia de modelos.
-     - Utilizar `threading` para operaciones I/O bound como la carga de datos o la escritura de resultados.
-     - Implementar un pool de workers para procesar lotes de textos en paralelo.
+     - Ver el rendimiento y escalamiento de los modelos entrenados
      - Realizar un dashboard 
 
