@@ -146,11 +146,10 @@ d) Visualización:
 
 6. Conclusiones y Trabajo Futuro
 
-
-- El dashboard desarrollado demuestra la viabilidad de implementar modelos de NLP complejos en una interfaz fácil de usar. Esto abre posibilidades para aplicaciones prácticas en diversos campos, desde el análisis de redes sociales hasta el servicio al cliente automatizado.
-
-8. Futuras Implementaciones
-   
 -  Realizar una comparación directa de la precisión de clasificación entre Naive Bayes y BERT en varios conjuntos de datos.
 - Medir el tiempo de inferencia de BERT para una comparación más completa del rendimiento.
 - Explorar técnicas de compresión de modelos para reducir el tamaño de BERT sin sacrificar significativamente el rendimiento.
+- El dashboard desarrollado demuestra la viabilidad de implementar modelos de NLP complejos en una interfaz fácil de usar. Esto abre posibilidades para aplicaciones prácticas en diversos campos, desde el análisis de redes sociales hasta el servicio al cliente automatizado.
+
+
+
